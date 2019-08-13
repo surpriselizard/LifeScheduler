@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReminderProjectWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="450" Width="800" Background="{DynamicResource BackgroundColor}">
+    <Window.Resources>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" x:Key="BackgroundColor">
+            <GradientStop Color="Gray" Offset="0.3" />
+            <GradientStop Color="Silver" Offset="0.75"/>
+            <GradientStop Color="WhiteSmoke" Offset="0.9"/>
+            <GradientStop Color="White" Offset="1.0"/>
+        </LinearGradientBrush>
+        <Image x:Key="NewReminderPic" Source="Pictures\NewReminder.png"/>
+    </Window.Resources>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File" Width="60">
+                <MenuItem Header="_New Reminder" Click="NewReminder_Clicked" Icon="{DynamicResource NewReminderPic}"/>
+                <MenuItem Header="_Open Reminder"/>
+                <MenuItem Header="_Edit Reminder"/>
+                <MenuItem Header="_Delete Reminder" />
+            </MenuItem>
+            <MenuItem Header="View" Width="60">
+                <MenuItem Header="S_ingle"/>
+                <MenuItem Header="_Week"/>
+                <MenuItem Header="_Month"/>
+            </MenuItem>
+        </Menu>
+    </DockPanel>
 </Window>
