@@ -35,9 +35,11 @@ namespace ReminderProjectWPF
             readStream.Dispose();
 
             foreach (var line in File.ReadAllLines(_path))
-            {
                 reminders.Add(line);
-            }
+
+            for (int i = 0; i < reminders.Count; ++i)
+                if (string.IsNullOrWhiteSpace(reminders[i]))
+                    reminders.Remove(reminders[i]);
 
             foreach (var line in reminders)
             {
@@ -56,10 +58,15 @@ namespace ReminderProjectWPF
         {
             ReminderDatabase.Add(reminder);
 
-            var writeStream = File.Open(_path, FileMode.Open, FileAccess.Write, FileShare.None);
+            var tempEnumerable = File.ReadLines(_path);
+            var tempLines = tempEnumerable.ToList();
+            tempLines.Add($"{reminder.ReminderName}*||*{reminder.DateDue}*||*{reminder.ReminderDesc}\n");
 
+            var writeStream = File.Open(_path, FileMode.Open, FileAccess.Write, FileShare.None);
             var writer = new StreamWriter(writeStream);
-            writer.WriteLine($"{reminder.ReminderName}*||*{reminder.DateDue}*||*{reminder.ReminderDesc}");
+
+            foreach (var line in tempLines)
+                writer.WriteLine(line);
 
             writer.Close();
         }

@@ -99,5 +99,8 @@
   <ItemGroup>
     <Resource Include="Pictures\NewReminder.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ReminderFile.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
