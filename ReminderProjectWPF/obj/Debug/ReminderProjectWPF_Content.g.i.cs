@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pictures/newreminder.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reminderfile.txt")]
 
 
