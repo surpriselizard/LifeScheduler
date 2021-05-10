@@ -9,3 +9,6 @@ As said before this project is a new version of a previous project where it was
 only in the console. Now there are a number of menus and popups so it will be 
 much more user friendly, better looking, more functional, and hopefully more
 features!
+
+(UPDATE)
+I have made a the project without uploading it to github. This will now be archived, I will likely upload the finished version in the future.
