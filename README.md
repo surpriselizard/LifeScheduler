@@ -1,14 +1,7 @@
-# ReminderProjectWPF
 A port of my previous Reminder Project but now in WPF instead of the console.
 
-This project will let you store reminders that have a name, desription, and date due.  
-You will also be able to view your reminders by themselves or display the reminders 
-in the week ahead or even the reminders in the current month. 
+This project will let you store reminders that have a name, description, and date. You will be able to see your reminders in the current week, previous week, or next week.
 
-As said before this project is a new version of a previous project where it was 
-only in the console. Now there are a number of menus and popups so it will be 
-much more user friendly, better looking, more functional, and hopefully more
-features!
+As opposed to the console version of this project, there is a GUI that makes for a easier, and more streamlined experinece.
 
-(UPDATE)
-I have made a the project without uploading it to github. This will now be archived, I will likely upload the finished version in the future.
+This project was renamed from ReminderProjectWPF to LifeScheduler to better fit the vision of the project while aslo being less technical
